@@ -12,6 +12,13 @@ void pronounce_with_festival(const std::string& text) {
     std::string command = "echo \"" + text + "\" | festival --tts";
     system(command.c_str());
 }
+bool isLinux() {
+#ifdef __linux__
+    return true;
+#else
+    return false;
+#endif
+}
 
 
 #ifdef _WIN32
@@ -42,7 +49,18 @@ void reads(const std::string& text) {
   system(command.c_str());
 }
 void spellingbee(vector<words>a){
+  
   clearScreen();
+  if (!isLinux())
+  {
+      cout<<"It is only available on Linux";
+      cout<<"Press any button to continue";
+          cin.ignore();
+          cin.get();
+          clearScreen();
+          return;
+         
+  }
   srand(time(0));
   string i,k;
   int index = rand() % a.size(),n=0;
