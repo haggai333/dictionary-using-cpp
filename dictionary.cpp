@@ -257,7 +257,7 @@ void quiz(const vector<words>& a) {
 int main(){
     int c,size=89517;
     vector<words> a;
-    load(a,"order.txt");
+    load(a,"wordlist.txt");
     loadSynonymsToStruct(a,"synons.txt");
       
  do {
