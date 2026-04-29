@@ -53,7 +53,7 @@ void spellingbee(vector<words>a){
   clearScreen();
   if (!isLinux())
   {
-      cout<<"It is only available on Linux";
+      cout<<"It is only available on Linux"<<endl;
       cout<<"Press any button to continue";
           cin.ignore();
           cin.get();
